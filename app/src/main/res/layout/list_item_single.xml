@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal"
+        android:paddingRight="18dp" >
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_weight="1"
+			android:layout_height="46dp"
+			android:orientation="vertical"
+			android:background="@android:color/transparent"
+			android:paddingLeft="18dp"
+			android:paddingRight="18dp"
+			android:paddingTop="5dp"
+			android:paddingBottom="5dp">
+
+			<TextView
+				android:id="@+id/itemTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="23dp"
+				android:text="Titulo"
+				android:textColor="@color/black"
+				android:textSize="16dp"
+				android:gravity="center_vertical"/>
+
+			<TextView
+				android:id="@+id/itemTitleFull"
+				android:layout_width="wrap_content"
+				android:layout_height="13dp"
+				android:gravity="center_vertical"
+				android:text="Titulo"
+				android:textColor="@color/black"
+				android:textSize="11dp"
+				android:layout_marginTop="-3dp"/>
+		</LinearLayout>
+
+        <ImageView
+    	    android:id="@+id/iconBullet"
+    	    android:layout_width="11dp"
+    	    android:layout_height="40dp"
+    	    android:layout_gravity="center"
+    	    android:src="@drawable/list_arrow_right" />
+
+    </LinearLayout>
+    
+</LinearLayout>
