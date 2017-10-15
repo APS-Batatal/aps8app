@@ -29,11 +29,8 @@ public class MainActivity extends AppCompatActivity implements TaskComplete {
 		super.onCreate(savedInstanceState); // Call super create
 		setContentView(R.layout.activity_main); // Set active layout
 
-
-
-
-		asyncTask = new UpdateTask(this); // Update the api by running the update task
-		asyncTask.delegate = this;
+		asyncTask = new UpdateTask(this, this); // Update the api by running the update task
+		//asyncTask.delegate = this;
 		asyncTask.execute();
 
 		listLine = (ListView) findViewById(R.id.line_List);
@@ -44,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements TaskComplete {
 	public void onTaskCompleted(String result) {
 		ArrayList<SimpleList> _list = new ArrayList<>();
 		for (int i = 0; i< 10; i++){
-			_list.add(new SimpleList(i,"Digo"));
+			_list.add(new SimpleList(i,"Digo", "AAA"));
 		}
 		ListAdapter _listAdapter = new ListAdapter(this.getApplicationContext(), _list);
 		listLine = (ListView) findViewById(R.id.line_List);

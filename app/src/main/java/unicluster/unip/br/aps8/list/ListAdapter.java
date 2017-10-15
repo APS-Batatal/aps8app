@@ -64,9 +64,12 @@ public class ListAdapter extends BaseAdapter
 		SimpleList list = (SimpleList) getItem(position);
 		list.setLayout(R.layout.list_item_single);
 		convertView = inflater.inflate(list.getLayout(), parent, false);
-		TextView label = (TextView) convertView.findViewById(R.id.itemTitle);
-		label.setText(list.getName());
 
+		TextView title = (TextView) convertView.findViewById(R.id.itemTitle);
+		title.setText(list.getName());
+
+		TextView subtitle = (TextView) convertView.findViewById(R.id.item_subtitle);
+		subtitle.setText(list.getSubtitle());
 
 		return convertView;
 	}

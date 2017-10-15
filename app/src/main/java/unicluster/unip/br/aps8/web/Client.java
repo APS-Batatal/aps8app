@@ -1,5 +1,6 @@
 package unicluster.unip.br.aps8.web;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,9 +16,10 @@ import java.util.Scanner;
 import unicluster.unip.br.aps8.constants.Api;
 
 public class Client {
-	public JSONObject update() {
+
+	private String execute(String _url) {
 		try {
-			URL url = new URL(Api.UPDATE);
+			URL url = new URL(_url);
 			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
 			connection.setDoOutput(true);
@@ -32,14 +34,31 @@ public class Client {
 			}
 			br.close();
 
-			String jsonString = sb.toString();
+			return sb.toString();
 
-			return new JSONObject(jsonString);
-		} catch (IOException | JSONException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return null;
 	}
-	public String status;
-	public String log;
+
+	public String update() {
+		return execute(Api.UPDATE);
+	}
+
+	public String status() {
+		return execute(Api.STATUS);
+	}
+
+	public  String status(String line) {
+		return execute(Api.STATUS + "?line=" + line);
+	}
+
+	public  String logs() {
+		return execute(Api.LOGS);
+	}
+
+	public  String logs(String line) {
+		return execute(Api.LOGS + "?line=" + line);
+	}
 }

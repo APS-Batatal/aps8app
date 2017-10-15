@@ -6,17 +6,14 @@ public class SimpleList implements ListItem
 {
 	private int id;
 	private String name;
-	private String friendlyName;
-	private Boolean divider = false;
-	private String listIdentifier;
+	private String subtitle;
 	private int layout = R.layout.list_item_single;
-	private Boolean firstPosition = false;
-	private String url;
 	
-	public SimpleList(int id, String name)
+	public SimpleList(int id, String name, String subtitle)
 	{
 		this.id = id;
 		this.name = name;
+		this.subtitle = subtitle;
 	}
 
 	public int getId() 
@@ -39,45 +36,16 @@ public class SimpleList implements ListItem
 		this.name = name;
 	}
 
-	public Boolean getDivider()
-	{
-		return divider;
-	}
-
-	public void setDivider(Boolean divider)
-	{
-		this.divider = divider;
-	}
-
-	public String getListIdentifier()
-	{
-		return listIdentifier;
-	}
-
-	public void setListIdentifier(String listIdentifier)
-	{
-		this.listIdentifier = listIdentifier;
-	}
-
 	public void setLayout(int layout) {	this.layout = layout; }
 
 	public int getLayout()	{ return layout; }
 
-	public Boolean getFirstPosition() {	return firstPosition; }
-
-	public void setFirstPosition(Boolean firstPosition) { this.firstPosition = firstPosition;	}
-
-	public String getFriendlyName()
-	{
-		return friendlyName;
+	public String getSubtitle() {
+		return subtitle;
 	}
 
-	public void setFriendlyName(String friendlyName)
-	{
-		this.friendlyName = friendlyName;
+	public void setSubtitle(String subtitle) {
+		this.subtitle = subtitle;
 	}
 
-	public String getUrl()	{ return url; 	}
-
-	public void setUrl(String url)	{	this.url = url; }
 }

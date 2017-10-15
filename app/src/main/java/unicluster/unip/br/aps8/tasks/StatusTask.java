@@ -3,22 +3,25 @@ package unicluster.unip.br.aps8.tasks;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import unicluster.unip.br.aps8.web.Client;
 
-public class UpdateTask extends AsyncTask<Void, Integer, String> {
+public class StatusTask extends AsyncTask<Void, Integer, String> {
 
 	private Context context;
 
 	private TaskComplete delegate;
 
-	public UpdateTask(Context context, TaskComplete delegate) {
+	public StatusTask(Context context, TaskComplete delegate) {
 		this.context = context;
 		this.delegate = delegate;
 	}
 
 	@Override
 	protected String doInBackground(Void... voids) {
-		return new Client().update().toString();
+		return new Client().status();
 	}
 
 	@Override
