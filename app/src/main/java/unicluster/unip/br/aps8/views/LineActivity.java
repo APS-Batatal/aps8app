@@ -1,7 +1,10 @@
 package unicluster.unip.br.aps8.views;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -11,6 +14,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
+import unicluster.unip.br.aps8.MainActivity;
 import unicluster.unip.br.aps8.R;
 import unicluster.unip.br.aps8.list.ListAdapter;
 import unicluster.unip.br.aps8.list.SimpleList;
@@ -52,6 +56,17 @@ public class LineActivity extends AppCompatActivity implements TaskComplete {
 			}
 			listAdapter = new ListAdapter(this.getApplicationContext(), _list);
 			lineList.setAdapter(listAdapter);
+			lineList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+				@Override
+				public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+					Intent intent = new Intent();
+					Bundle bundle = new Bundle();
+					bundle.putLong("id", id);
+					intent.putExtras(bundle);
+					intent.setClass(LineActivity.this, LogActivity.class);
+					startActivity(intent);
+				}
+			});
 
 		} catch (JSONException e) {
 			e.printStackTrace();
