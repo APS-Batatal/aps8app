@@ -4,11 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!-- Artepedia Custom Colors -->
-    <color name="white">#FFFFFF</color>
-    <color name="white50">#80FFFFFF</color>
+    <!-- Custom Colors -->
     <color name="black">#000000</color>
-    <color name="black90">#E6000000</color>
-    <color name="orange">#FF6600</color>
-    <color name="red">#FF0000</color>
+    <!-- Metro Colors -->
+    <color name="metro_azul">#171796</color>
+    <color name="metro_verde">#007A5E</color>
+    <color name="metro_vermelha">#ED2E38</color>
+    <color name="metro_amarela">#FFD511</color>
+    <color name="metro_lilas">#BA1FB5</color>
+    <color name="metro_laranja">#ED6E00</color>
+    <color name="metro_prata">#8F8F8C</color>
+    <color name="metro_ouro">#D48500</color>
 </resources>

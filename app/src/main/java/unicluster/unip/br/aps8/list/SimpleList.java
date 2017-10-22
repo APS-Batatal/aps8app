@@ -7,6 +7,8 @@ public class SimpleList implements ListItem
 	private int id;
 	private String name;
 	private String subtitle;
+	private int color;
+
 	private int layout = R.layout.list_item_single;
 	
 	public SimpleList(int id, String name, String subtitle)
@@ -14,6 +16,13 @@ public class SimpleList implements ListItem
 		this.id = id;
 		this.name = name;
 		this.subtitle = subtitle;
+	}
+	public SimpleList(int id, String name, String subtitle, int color)
+	{
+		this.id = id;
+		this.name = name;
+		this.subtitle = subtitle;
+		this.color = color;
 	}
 
 	public int getId() 
@@ -36,10 +45,6 @@ public class SimpleList implements ListItem
 		this.name = name;
 	}
 
-	public void setLayout(int layout) {	this.layout = layout; }
-
-	public int getLayout()	{ return layout; }
-
 	public String getSubtitle() {
 		return subtitle;
 	}
@@ -48,4 +53,11 @@ public class SimpleList implements ListItem
 		this.subtitle = subtitle;
 	}
 
+	public int getColor() { return color; }
+
+	public void setColor(int color) { this.color = color; }
+
+	public void setLayout(int layout) {	this.layout = layout; }
+
+	public int getLayout()	{ return layout; }
 }

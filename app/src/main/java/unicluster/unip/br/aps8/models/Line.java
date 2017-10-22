@@ -1,25 +1,39 @@
 package unicluster.unip.br.aps8.models;
 
-import java.io.Serializable;
-import java.sql.Date;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-public class Line implements Serializable {
+import unicluster.unip.br.aps8.R;
+import unicluster.unip.br.aps8.utils.Utils;
 
-	private Long id;
+public class Line {
+
+	// VARIABLES
 	private String name;
 	private String color;
-	private String number;
-	private Date created_at;
-	private Date updated_at;
+	private int number;
 
-	public Long getId() {
-		return id;
+	// CONSTRUCTORS
+	public Line(JSONObject data) throws JSONException {
+		this.name = data.getString("name");
+		this.color = data.getString("color");
+		this.number = data.getInt("number");
 	}
-
-	public void setId(Long id) {
-		this.id = id;
+	public  Line(String name, String color , int number) {
+		this.name = name;
+		this.color = color;
+		this.number = number;
 	}
-
+	// PUBLIC FUNCTIONS
+	public int getColorId() {
+		try {
+			String id = "metro_" + Utils.stripAccents(this.color).toLowerCase();
+			return R.color.class.getField(id).getInt(null);
+		} catch (Exception e) {
+			return android.R.color.black;
+		}
+	}
+	// GETTERS AND SETTERS
 	public String getName() {
 		return name;
 	}
@@ -36,27 +50,11 @@ public class Line implements Serializable {
 		this.color = color;
 	}
 
-	public String getNumber() {
+	public int getNumber() {
 		return number;
 	}
 
-	public void setNumber(String number) {
+	public void setNumber(int number) {
 		this.number = number;
-	}
-
-	public Date getCreated_at() {
-		return created_at;
-	}
-
-	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
-	}
-
-	public Date getUpdated_at() {
-		return updated_at;
-	}
-
-	public void setUpdated_at(Date updated_at) {
-		this.updated_at = updated_at;
 	}
 }

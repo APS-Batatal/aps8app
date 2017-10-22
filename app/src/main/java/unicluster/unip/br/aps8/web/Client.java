@@ -50,7 +50,7 @@ public class Client {
 		return execute(Api.STATUS);
 	}
 
-	public  String status(String line) {
+	public  String status(int line) {
 		return execute(Api.STATUS + "?line=" + line);
 	}
 

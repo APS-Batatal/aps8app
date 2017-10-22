@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -14,10 +13,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import unicluster.unip.br.aps8.MainActivity;
 import unicluster.unip.br.aps8.R;
 import unicluster.unip.br.aps8.list.ListAdapter;
 import unicluster.unip.br.aps8.list.SimpleList;
+import unicluster.unip.br.aps8.models.Line;
+import unicluster.unip.br.aps8.models.Log;
 import unicluster.unip.br.aps8.tasks.StatusTask;
 import unicluster.unip.br.aps8.tasks.TaskComplete;
 
@@ -49,10 +49,10 @@ public class LineActivity extends AppCompatActivity implements TaskComplete {
 			for (int i=0; i< data.length(); i ++) {
 				JSONObject obj = data.getJSONObject(i);
 
-				JSONObject line = obj.getJSONObject("line");
-				JSONObject log = obj.getJSONObject("log");
+				Line line = new Line(obj.getJSONObject("line"));
+				Log log = new Log(line, obj.getJSONObject("log"));
 
-				_list.add(new SimpleList(line.getInt("number"),line.getString("name"), log.getString("status")));
+				_list.add(new SimpleList(line.getNumber(),line.getName(), log.getStatus(), line.getColorId()));
 			}
 			listAdapter = new ListAdapter(this.getApplicationContext(), _list);
 			lineList.setAdapter(listAdapter);

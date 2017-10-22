@@ -3,4 +3,6 @@
     <string name="unicluster_logo">Logo Unicluster</string>
     <string name="unip_logo">Logo Unip</string>
     <string name="metro_logo">Logo Metrô</string>
+    <string name="Line">Linha</string>
+    <string name="train_icon">Ícone da linha</string>
 </resources>

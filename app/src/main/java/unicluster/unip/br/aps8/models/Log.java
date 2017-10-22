@@ -1,28 +1,34 @@
 package unicluster.unip.br.aps8.models;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.Serializable;
 import java.sql.Date;
 
-public class Log implements Serializable {
+import unicluster.unip.br.aps8.utils.Utils;
 
-	private Long id;
+public class Log {
+
 	private Line line;
 	private String status;
 	private String description;
-	private Date created_at;
 	private Date updated_at;
 
-	public Long getId() {
-		return id;
+	public Log(Line line, JSONObject data) throws JSONException {
+		this.line = line;
+		this.status = data.getString("status");
+		this.description = data.getString("description");
+		this.updated_at = Utils.parseDate(data.getString("updated_at"));
+	}
+	public Log(Line line, String status, String description, Date updated_at) {
+		this.line = line;
+		this.status = status;
+		this.description = description;
+		this.updated_at = updated_at;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Line getLine() {
-		return line;
-	}
+	public Line getLine() { return line; }
 
 	public void setLine(Line line) {
 		this.line = line;
@@ -42,14 +48,6 @@ public class Log implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public Date getCreated_at() {
-		return created_at;
-	}
-
-	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
 	}
 
 	public Date getUpdated_at() {

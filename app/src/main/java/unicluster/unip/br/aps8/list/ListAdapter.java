@@ -1,10 +1,12 @@
 package unicluster.unip.br.aps8.list;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -70,6 +72,9 @@ public class ListAdapter extends BaseAdapter
 
 		TextView subtitle = (TextView) convertView.findViewById(R.id.item_subtitle);
 		subtitle.setText(list.getSubtitle());
+
+		ImageView image = (ImageView) convertView.findViewById(R.id.icon_metro);
+		image.setColorFilter(ContextCompat.getColor(context, list.getColor()));
 
 		return convertView;
 	}
