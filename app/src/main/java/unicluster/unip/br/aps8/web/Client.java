@@ -50,15 +50,13 @@ public class Client {
 		return execute(Api.STATUS);
 	}
 
-	public  String status(int line) {
-		return execute(Api.STATUS + "?line=" + line);
-	}
+	public  String status(int line) { return execute(Api.STATUS + "?line=" + line); }
 
 	public  String logs() {
 		return execute(Api.LOGS);
 	}
 
-	public  String logs(String line) {
+	public  String logs(int line) {
 		return execute(Api.LOGS + "?line=" + line);
 	}
 }

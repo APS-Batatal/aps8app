@@ -3,8 +3,7 @@ package unicluster.unip.br.aps8.models;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import unicluster.unip.br.aps8.utils.Utils;
 
@@ -28,6 +27,17 @@ public class Log {
 		this.updated_at = updated_at;
 	}
 
+	// PUBLIC FUNCTIONS
+	public JSONObject toJSON() throws JSONException {
+		JSONObject json = new JSONObject();
+		json.put("line", this.line.toJSON());
+		json.put("color", this.status);
+		json.put("number", this.description);
+		json.put("updated_at", this.updated_at);
+		return json;
+	}
+
+	// GETTERS AND SETTERS
 	public Line getLine() { return line; }
 
 	public void setLine(Line line) {

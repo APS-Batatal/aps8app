@@ -33,6 +33,15 @@ public class Line {
 			return android.R.color.black;
 		}
 	}
+
+	// PUBLIC FUNCTIONS
+	public JSONObject toJSON() throws JSONException {
+		JSONObject json = new JSONObject();
+		json.put("name", this.name);
+		json.put("color", this.color);
+		json.put("number", this.number);
+		return json;
+	}
 	// GETTERS AND SETTERS
 	public String getName() {
 		return name;

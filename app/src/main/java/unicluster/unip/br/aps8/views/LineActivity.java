@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -67,6 +68,9 @@ public class LineActivity extends AppCompatActivity implements TaskComplete {
 					startActivity(intent);
 				}
 			});
+
+			ProgressBar progress = (ProgressBar) findViewById(R.id.line_progress);
+			progress.setVisibility(View.INVISIBLE);
 
 		} catch (JSONException e) {
 			e.printStackTrace();
