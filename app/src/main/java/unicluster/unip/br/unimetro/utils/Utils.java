@@ -1,7 +1,6 @@
-package unicluster.unip.br.aps8.utils;
+package unicluster.unip.br.unimetro.utils;
 
 import java.text.Normalizer;
-import java.text.ParseException;
 import java.util.Date;
 
 /**

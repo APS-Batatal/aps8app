@@ -1,4 +1,4 @@
-package unicluster.unip.br.aps8;
+package unicluster.unip.br.unimetro;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,11 +10,11 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import unicluster.unip.br.aps8.list.ListAdapter;
-import unicluster.unip.br.aps8.list.SimpleList;
-import unicluster.unip.br.aps8.tasks.TaskComplete;
-import unicluster.unip.br.aps8.tasks.UpdateTask;
-import unicluster.unip.br.aps8.views.LogActivity;
+import unicluster.unip.br.unimetro.list.ListAdapter;
+import unicluster.unip.br.unimetro.list.SimpleList;
+import unicluster.unip.br.unimetro.tasks.TaskComplete;
+import unicluster.unip.br.unimetro.tasks.UpdateTask;
+import unicluster.unip.br.unimetro.views.LogActivity;
 
 public class MainActivity extends AppCompatActivity implements TaskComplete {
 

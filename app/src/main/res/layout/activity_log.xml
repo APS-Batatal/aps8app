@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="unicluster.unip.br.aps8.views.LogActivity"
+    tools:context="unicluster.unip.br.unimetro.views.LogActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="81dp"
     tools:visibility="visible">

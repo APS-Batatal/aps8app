@@ -1,4 +1,4 @@
-package unicluster.unip.br.aps8.views;
+package unicluster.unip.br.unimetro.views;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -14,13 +14,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import unicluster.unip.br.aps8.R;
-import unicluster.unip.br.aps8.list.ListAdapter;
-import unicluster.unip.br.aps8.list.SimpleList;
-import unicluster.unip.br.aps8.models.Line;
-import unicluster.unip.br.aps8.models.Log;
-import unicluster.unip.br.aps8.tasks.StatusTask;
-import unicluster.unip.br.aps8.tasks.TaskComplete;
+import unicluster.unip.br.unimetro.R;
+import unicluster.unip.br.unimetro.list.ListAdapter;
+import unicluster.unip.br.unimetro.list.SimpleList;
+import unicluster.unip.br.unimetro.models.Line;
+import unicluster.unip.br.unimetro.models.Log;
+import unicluster.unip.br.unimetro.tasks.StatusTask;
+import unicluster.unip.br.unimetro.tasks.TaskComplete;
 
 public class LineActivity extends AppCompatActivity implements TaskComplete {
 

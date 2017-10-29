@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="unicluster.unip.br.aps8">
+          package="unicluster.unip.br.unimetro">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="unicluster.unip.br.unimetro.MainActivity">
         </activity>
-        <activity android:name=".views.LogActivity">
+        <activity android:name="unicluster.unip.br.unimetro.views.LogActivity">
         </activity>
         <activity
-            android:name=".views.SplashActivity"
+            android:name="unicluster.unip.br.unimetro.views.SplashActivity"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -24,7 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".views.LineActivity">
+        <activity android:name="unicluster.unip.br.unimetro.views.LineActivity">
         </activity>
     </application>
 

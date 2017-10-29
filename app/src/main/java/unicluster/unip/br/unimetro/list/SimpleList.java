@@ -1,6 +1,6 @@
-package unicluster.unip.br.aps8.list;
+package unicluster.unip.br.unimetro.list;
 
-import unicluster.unip.br.aps8.R;
+import unicluster.unip.br.unimetro.R;
 
 public class SimpleList implements ListItem
 {

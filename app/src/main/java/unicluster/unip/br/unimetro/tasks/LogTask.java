@@ -1,14 +1,11 @@
-package unicluster.unip.br.aps8.tasks;
+package unicluster.unip.br.unimetro.tasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import unicluster.unip.br.unimetro.web.Client;
 
-import unicluster.unip.br.aps8.web.Client;
-
-public class StatusTask extends AsyncTask<Void, Integer, String> {
+public class LogTask extends AsyncTask<Void, Integer, String> {
 
 	private Context context;
 
@@ -18,13 +15,13 @@ public class StatusTask extends AsyncTask<Void, Integer, String> {
 
 	private int line = -1;
 
-	public StatusTask(Context context, TaskComplete delegate) {
+	public LogTask(Context context, TaskComplete delegate) {
 		this.context = context;
 		this.delegate = delegate;
 		this.client = new Client();
 	}
 
-	public StatusTask(Context context, TaskComplete delegate, int line) {
+	public LogTask(Context context, TaskComplete delegate, int line) {
 		this.context = context;
 		this.delegate = delegate;
 		this.line = line;
@@ -35,9 +32,9 @@ public class StatusTask extends AsyncTask<Void, Integer, String> {
 	@Override
 	protected String doInBackground(Void... voids) {
 		if (this.line != -1) {
-			return  client.status(this.line);
+			return  client.logs(this.line);
 		} else {
-			return client.status();
+			return client.logs();
 		}
 	}
 

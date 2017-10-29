@@ -1,19 +1,12 @@
-package unicluster.unip.br.aps8.web;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+package unicluster.unip.br.unimetro.web;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
 
-import unicluster.unip.br.aps8.constants.Api;
+import unicluster.unip.br.unimetro.constants.Api;
 
 public class Client {
 

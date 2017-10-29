@@ -1,9 +1,9 @@
-package unicluster.unip.br.aps8.tasks;
+package unicluster.unip.br.unimetro.tasks;
 
 import android.content.Context;
 import android.os.AsyncTask;
 
-import unicluster.unip.br.aps8.web.Client;
+import unicluster.unip.br.unimetro.web.Client;
 
 public class UpdateTask extends AsyncTask<Void, Integer, String> {
 

@@ -1,4 +1,4 @@
-package unicluster.unip.br.aps8;
+package unicluster.unip.br.unimetro;
 
 import org.junit.Test;
 

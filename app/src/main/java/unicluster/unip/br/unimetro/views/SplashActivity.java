@@ -1,12 +1,12 @@
-package unicluster.unip.br.aps8.views;
+package unicluster.unip.br.unimetro.views;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import unicluster.unip.br.aps8.R;
-import unicluster.unip.br.aps8.tasks.TaskComplete;
-import unicluster.unip.br.aps8.tasks.UpdateTask;
+import unicluster.unip.br.unimetro.R;
+import unicluster.unip.br.unimetro.tasks.TaskComplete;
+import unicluster.unip.br.unimetro.tasks.UpdateTask;
 
 public class SplashActivity extends AppCompatActivity implements TaskComplete {
 

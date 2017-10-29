@@ -1,4 +1,4 @@
-package unicluster.unip.br.aps8.list;
+package unicluster.unip.br.unimetro.list;
 
 import android.content.Context;
 import android.support.v4.content.ContextCompat;
@@ -9,11 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
-import java.util.Locale;
-import unicluster.unip.br.aps8.R;
+
+import unicluster.unip.br.unimetro.R;
 
 public class ListAdapter extends BaseAdapter
 {

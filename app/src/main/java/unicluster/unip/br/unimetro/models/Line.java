@@ -1,10 +1,10 @@
-package unicluster.unip.br.aps8.models;
+package unicluster.unip.br.unimetro.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import unicluster.unip.br.aps8.R;
-import unicluster.unip.br.aps8.utils.Utils;
+import unicluster.unip.br.unimetro.R;
+import unicluster.unip.br.unimetro.utils.Utils;
 
 public class Line {
 

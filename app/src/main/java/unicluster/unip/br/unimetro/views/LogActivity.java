@@ -1,8 +1,5 @@
-package unicluster.unip.br.aps8.views;
+package unicluster.unip.br.unimetro.views;
 
-import android.net.Uri;
-import android.support.constraint.ConstraintLayout;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,14 +16,13 @@ import java.util.ArrayList;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import unicluster.unip.br.aps8.R;
-import unicluster.unip.br.aps8.list.ListAdapter;
-import unicluster.unip.br.aps8.list.SimpleList;
-import unicluster.unip.br.aps8.models.Line;
-import unicluster.unip.br.aps8.models.Log;
-import unicluster.unip.br.aps8.tasks.LogTask;
-import unicluster.unip.br.aps8.tasks.StatusTask;
-import unicluster.unip.br.aps8.tasks.TaskComplete;
+import unicluster.unip.br.unimetro.R;
+import unicluster.unip.br.unimetro.list.ListAdapter;
+import unicluster.unip.br.unimetro.list.SimpleList;
+import unicluster.unip.br.unimetro.models.Line;
+import unicluster.unip.br.unimetro.models.Log;
+import unicluster.unip.br.unimetro.tasks.LogTask;
+import unicluster.unip.br.unimetro.tasks.TaskComplete;
 
 public class LogActivity extends AppCompatActivity implements TaskComplete {
 
@@ -69,7 +65,7 @@ public class LogActivity extends AppCompatActivity implements TaskComplete {
 				for(int k=0;k< logs.length();k ++) {
 					JSONObject _obj = logs.getJSONObject(k);
 					Log log = new Log(line, _obj.getJSONObject("log"));
-					SimpleDateFormat _formatter =  new SimpleDateFormat("dd/MM/yyyy KK:mm a");
+					SimpleDateFormat _formatter =  new SimpleDateFormat("dd/MM/yyyy KK:mm a", new Locale("pt", "BR"));
 					_formatter.setTimeZone(TimeZone.getTimeZone("GMT-5"));
 					_list.add(new SimpleList(0, log.getStatus(), _formatter.format(log.getUpdated_at()), line.getColorId()));
 
@@ -82,12 +78,12 @@ public class LogActivity extends AppCompatActivity implements TaskComplete {
 						txtDescription.setText(log.getDescription());
 
 						TextView txtLastDate = (TextView) findViewById(R.id.txt_last_date);
-						SimpleDateFormat formatter =  new SimpleDateFormat("dd/MM/yyyy");
+						SimpleDateFormat formatter =  new SimpleDateFormat("dd/MM/yyyy", new Locale("pt", "BR"));
 						formatter.setTimeZone(TimeZone.getTimeZone("GMT-5"));
 						txtLastDate.setText(formatter.format(log.getUpdated_at()));
 
 						TextView txtLastHour = (TextView) findViewById(R.id.txt_last_hour);
-						formatter =  new SimpleDateFormat("KK:mm a");
+						formatter =  new SimpleDateFormat("KK:mm a", new Locale("pt", "BR"));
 						formatter.setTimeZone(TimeZone.getTimeZone("GMT-5"));
 						txtLastHour.setText(formatter.format(log.getUpdated_at()));
 

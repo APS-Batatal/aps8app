@@ -1,4 +1,4 @@
-package unicluster.unip.br.aps8;
+package unicluster.unip.br.unimetro;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
 		// Context of the app under test.
 		Context appContext = InstrumentationRegistry.getTargetContext();
 
-		assertEquals("unicluster.unip.br.aps8", appContext.getPackageName());
+		assertEquals("unicluster.unip.br.unimetro", appContext.getPackageName());
 	}
 }

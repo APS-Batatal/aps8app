@@ -1,4 +1,4 @@
-package unicluster.unip.br.aps8.list;
+package unicluster.unip.br.unimetro.list;
 
 public interface ListItem 
 {
