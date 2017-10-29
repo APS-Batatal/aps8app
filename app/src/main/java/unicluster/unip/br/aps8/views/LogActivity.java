@@ -37,6 +37,7 @@ public class LogActivity extends AppCompatActivity implements TaskComplete {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getSupportActionBar().hide();
 		Bundle bundle = getIntent().getExtras();
 		id = (int) (long) bundle.getLong("id");
 		setContentView(R.layout.activity_log);

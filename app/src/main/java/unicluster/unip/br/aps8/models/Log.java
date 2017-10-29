@@ -18,6 +18,9 @@ public class Log {
 		this.line = line;
 		this.status = data.getString("status");
 		this.description = data.getString("description");
+		if(this.description == "null") {
+			this.description = null;
+		}
 		this.updated_at = Utils.parseDate(data.getString("updated_at"));
 	}
 	public Log(Line line, String status, String description, Date updated_at) {
